@@ -32,7 +32,7 @@ body {
 
 /* Header */
 header {
-  background-image: url(/images/header-bg.png);
+  background-image: url(../images/header-bg.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,7 +121,7 @@ section {
     -webkit-transform: translate(0%, 2%);
     -moz-transform: translate(0%, 2%);
     transform: translate(0%, 2%);
-    background-image: url(/images/doctor-2x.png);
+    background-image: url(../images/doctor-2x.png);
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
