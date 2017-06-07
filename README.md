@@ -1,0 +1,1 @@
+A one off responsive page using HTML5 semantic tags.

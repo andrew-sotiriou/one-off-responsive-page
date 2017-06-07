@@ -1,0 +1,341 @@
+@import "../helper/mixins";
+
+/* Placeholder Selectors */
+
+%blue{
+    color: #06486e;
+}
+
+%grey {
+    color: #282828;
+}
+/* /Placeholder Selectors */
+
+/* Orange button */
+
+.orange-btn {
+    @include border-radius(5px);
+    background-color: #ff9933;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* /Orange button */
+
+//Start
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+header {
+    background-image: url(/images/header-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 350px;
+    position: relative;
+    text-align: center;
+
+    h1 {
+        position: absolute;
+        width: 100%;
+        margin-top: 10%;
+        font-size: 2.25rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 30px #ffffff;
+    
+        &:after {
+            @include pseudo("", block, relative, 15%);
+            border-bottom-style: solid;
+            margin: 0 auto;
+        }
+    }
+
+    p {
+        display: inline-block;
+        position: relative;
+        width: 60%;
+        color: #464646;
+        top: 44%;
+        margin-top: 2%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 30px #ffffff;
+    }
+
+    a {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        margin-left: -85px;
+    }
+}
+
+@media (min-width: 600px){
+    header {
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 2%;
+
+            &:after{
+                content: "";
+                width: 100px;
+            }
+        }
+        p {
+            top: 50%;
+            width: 100%;
+        } 
+    }
+}
+
+/* /Header */
+
+/* Main Section */
+main {
+    width: 100%;
+    margin: 20px 0px 0px;
+    display: block;
+
+    h2 {
+        @extend %blue;
+        font-size: 1.25rem;
+        padding-bottom: 1%;
+    }
+}
+
+@media (min-width: 600px){
+    main {
+        h2{
+            font-size: 1.75rem;
+        }
+    }
+}
+
+@media (min-width: 800px){
+    main {
+        display: flex;
+        margin: 50px 0 0px;
+    }
+}
+
+/* Section */
+
+section {
+    width: 90%;
+    display: inline-block;
+    padding-left: 5%;
+
+    #section-left{
+        float:left;
+        width: 90%;
+        margin-bottom: 2%;
+    }
+
+    p{
+        @extend %grey; 
+        line-height: 22px;
+        padding-bottom: 15px;
+        
+        &:last-of-type{
+            padding-top: 3%;
+        }
+    }
+
+    .orange-btn{
+        margin-bottom: 20px;
+    }
+
+    figure {
+        @include translate(0%, 2%);
+        background-image: url(/images/doctor-2x.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain; 
+        width: 100%;
+        display: none;
+        position: relative;
+        height: 300px;
+        z-index: -1;
+    }
+
+    a {
+        @extend %blue;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 600px){
+    section{   
+        figure{
+            display: inline-block;
+            right: 40%;
+        }
+    }
+}
+
+@media (min-width: 800px){
+    section{
+        #section-left{
+            width: 50%;
+        }
+        figure{
+            @include translate(0%, 11%);
+            width: 45%;
+            right: 3%;
+            height: 90%;
+            float: right;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    section{
+        figure{
+            margin-right: 5%;
+        }
+    }
+}
+
+/* /Section */
+
+/* /Main Section */
+
+/* Footer */
+
+footer{
+    clear: both;
+    background-color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+
+    h4{
+        @extend %blue;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 1.25rem;
+    }
+
+    .row{   
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 5%;
+
+        .steps-main{
+            color: #282828;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .steps-sub{
+            color: #838383;
+            font-size: 1rem;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .row-imgs{
+            padding-bottom: 10px;
+        }
+        
+        .r-img1{
+            width: 25%;
+        }
+
+        .r-img2{
+            width: 15%;
+        }
+
+        .r-img3{
+            width: 13%;
+        }
+    }
+}
+
+/* Circle */
+
+.circle{
+    @include border-radius(50%);
+    color: #06486e;
+    font-size: 2rem;
+    border: 3px solid #06486e;
+    width: 40px;
+    line-height: 1em;
+    position: relative;
+    display: inline-block;
+    margin-top: 3%;
+    
+    .height-fix{
+        margin-top: 100%;
+    }
+    
+    .num{
+        position: absolute;
+        left: 0;
+        top: 54%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        margin-top: -16px;
+    }
+}
+/* /Circle */
+
+/* Blue Bar */
+
+.blue-bar{
+    &:before {
+        @include pseudo("", block, relative, 25%);
+        border-top: 3px solid #06486e;
+        left: 37%;
+        padding-bottom: 5%;
+    }
+}
+/* /Blue Bar */
+
+@media (min-width: 600px){
+    footer{
+        h4{
+            font-size: 1.5rem;
+        }
+
+        .row{
+            .steps-main{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 800px){
+    footer{
+        .row{ 
+            width: 30%;
+            padding-bottom: 0%;
+        }
+    }
+
+    .blue-bar{
+        &:before {
+            display: none;
+        }
+    }
+}
+
+/* /Footer */

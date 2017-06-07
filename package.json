@@ -1,0 +1,17 @@
+{
+  "name": "one-off-page",
+  "version": "1.0.0",
+  "description": "a one off responsive page",
+  "main": "one-off-page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "andrew",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
