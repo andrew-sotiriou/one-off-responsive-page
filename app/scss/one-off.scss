@@ -39,6 +39,10 @@ body {
     height: 100%;
 }
 
+.clear{
+    clear: both;
+}
+
 /* Header */
 header {
     background-image: url('../images/header-bg.png');
@@ -109,13 +113,13 @@ header {
 /* Main Section */
 main {
     width: 100%;
-    margin: 20px 0px 0px;
     display: block;
 
     h2 {
         @extend %blue;
         font-size: 1.25rem;
         padding-bottom: 1%;
+        padding-top: 5%;
     }
 }
 
@@ -129,7 +133,6 @@ main {
 
 @media (min-width: 800px){
     main {
-        display: flex;
         margin: 50px 0 0px;
     }
 }
@@ -137,14 +140,20 @@ main {
 /* Section */
 
 section {
-    width: 90%;
+    width: 95%;
     display: inline-block;
     padding-left: 5%;
+    min-width: 95%;
+    max-width: 95%;
+    height: auto;
+    min-height: 50%;
+    max-height: 75%;
+    padding-bottom: 5%;
+    padding-top: 0%;
 
     #section-left{
-        float:left;
+        float: left;
         width: 90%;
-        margin-bottom: 2%;
     }
 
     p{
@@ -181,7 +190,8 @@ section {
 }
 
 @media (min-width: 600px){
-    section{   
+    section{ 
+        padding-bottom: 0%;  
         figure{
             display: inline-block;
             right: 40%;
@@ -191,11 +201,12 @@ section {
 
 @media (min-width: 800px){
     section{
+        height: 65vh;
         #section-left{
             width: 50%;
         }
         figure{
-            @include translate(0%, 11%);
+            @include translate(0%, 13%);
             width: 45%;
             right: 3%;
             height: 90%;
