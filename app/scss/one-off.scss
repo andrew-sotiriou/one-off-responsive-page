@@ -198,8 +198,8 @@ section {
         position: relative;
         left: 5%;
         width: 85%;
-        height: auto;
-        margin-top: 5%;
+        height: 75%;
+        margin-top: 10%;
         margin-bottom: 5%;
     }
 }
@@ -211,6 +211,10 @@ section {
         figure{
             display: inline-block;
             right: 40%;
+        }
+
+        video{
+            margin-top: 5%;
         }
     }
 }
@@ -235,6 +239,14 @@ section {
     section{
         figure{
             margin-right: 5%;
+        }
+    }
+}
+
+@media (min-width: 1400px){
+    section{
+        video{
+            height: 60%;
         }
     }
 }

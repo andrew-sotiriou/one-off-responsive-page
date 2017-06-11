@@ -146,8 +146,8 @@ section {
     position: relative;
     left: 5%;
     width: 85%;
-    height: auto;
-    margin-top: 5%;
+    height: 75%;
+    margin-top: 10%;
     margin-bottom: 5%; }
 
 @media (min-width: 600px) {
@@ -155,7 +155,9 @@ section {
     padding-bottom: 0%; }
     section figure {
       display: inline-block;
-      right: 40%; } }
+      right: 40%; }
+    section video {
+      margin-top: 5%; } }
 
 @media (min-width: 800px) {
   section {
@@ -174,6 +176,10 @@ section {
 @media (min-width: 1000px) {
   section figure {
     margin-right: 5%; } }
+
+@media (min-width: 1400px) {
+  section video {
+    height: 60%; } }
 
 /* /Section */
 /* /Main Section */
