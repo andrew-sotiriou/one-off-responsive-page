@@ -121,6 +121,12 @@ main {
         padding-bottom: 1%;
         padding-top: 5%;
     }
+
+    section{
+        &:nth-child(2){
+            background-color: lightblue;
+        }
+    }
 }
 
 @media (min-width: 600px){
@@ -187,7 +193,17 @@ section {
         @extend %blue;
         font-weight: bold;
     }
+
+    video{
+        position: relative;
+        left: 5%;
+        width: 85%;
+        height: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }
+
 
 @media (min-width: 600px){
     section{ 
