@@ -121,12 +121,6 @@ main {
         padding-bottom: 1%;
         padding-top: 5%;
     }
-
-    section{
-        &:nth-child(2){
-            background-color: lightblue;
-        }
-    }
 }
 
 @media (min-width: 600px){
@@ -156,6 +150,16 @@ section {
     max-height: 75%;
     padding-bottom: 5%;
     padding-top: 0%;
+    margin: 0 auto;
+
+    &:nth-child(2){
+        background-color: lightblue;
+        padding-left: 0%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 0%;
+    }
 
     #section-left{
         float: left;
@@ -196,11 +200,9 @@ section {
 
     video{
         position: relative;
-        left: 5%;
-        width: 85%;
-        height: 75%;
-        margin-top: 10%;
-        margin-bottom: 5%;
+        padding: 5% 10% 5% 10%;
+        height: auto;
+        width: 80%;
     }
 }
 
@@ -211,10 +213,6 @@ section {
         figure{
             display: inline-block;
             right: 40%;
-        }
-
-        video{
-            margin-top: 5%;
         }
     }
 }
@@ -239,14 +237,6 @@ section {
     section{
         figure{
             margin-right: 5%;
-        }
-    }
-}
-
-@media (min-width: 1400px){
-    section{
-        video{
-            height: 60%;
         }
     }
 }

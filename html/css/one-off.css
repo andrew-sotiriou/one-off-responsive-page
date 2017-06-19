@@ -94,8 +94,6 @@ main {
     font-size: 1.25rem;
     padding-bottom: 1%;
     padding-top: 5%; }
-  main section:nth-child(2) {
-    background-color: lightblue; }
 
 @media (min-width: 600px) {
   main h2 {
@@ -116,7 +114,15 @@ section {
   min-height: 50%;
   max-height: 75%;
   padding-bottom: 5%;
-  padding-top: 0%; }
+  padding-top: 0%;
+  margin: 0 auto; }
+  section:nth-child(2) {
+    background-color: lightblue;
+    padding-left: 0%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 0%; }
   section #section-left {
     float: left;
     width: 90%; }
@@ -144,20 +150,16 @@ section {
     font-weight: bold; }
   section video {
     position: relative;
-    left: 5%;
-    width: 85%;
-    height: 75%;
-    margin-top: 10%;
-    margin-bottom: 5%; }
+    padding: 5% 10% 5% 10%;
+    height: auto;
+    width: 80%; }
 
 @media (min-width: 600px) {
   section {
     padding-bottom: 0%; }
     section figure {
       display: inline-block;
-      right: 40%; }
-    section video {
-      margin-top: 5%; } }
+      right: 40%; } }
 
 @media (min-width: 800px) {
   section {
@@ -176,10 +178,6 @@ section {
 @media (min-width: 1000px) {
   section figure {
     margin-right: 5%; } }
-
-@media (min-width: 1400px) {
-  section video {
-    height: 60%; } }
 
 /* /Section */
 /* /Main Section */
