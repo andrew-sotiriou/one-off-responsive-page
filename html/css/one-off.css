@@ -153,6 +153,9 @@ section {
     padding: 5% 10% 5% 10%;
     height: auto;
     width: 80%; }
+    section video::cue {
+      color: white;
+      background-color: transparent; }
 
 @media (min-width: 600px) {
   section {
