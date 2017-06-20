@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>One-Off-Page</title>
 		<link rel="stylesheet" href="./css/one-off.css">
-		<!--<script src="./js/one-off.js"></script>-->
 	</head>
 	<body>
 		<header>
@@ -30,12 +29,18 @@
 				</figure>
 			</section>
 			<section>
-				<video controls>
+				<video id="bbb-vid" controls>
 					<source src="./videos/mov_bbb.mp4" type="video/mp4">
 					<track default label="English" kind="subtitles" srcland="en" src="./videos/one-off.vtt">
   					<p>Your browser does not support HTML5 video.</p>
 				</video>
-				</figure>
+				<p class="courtesy">Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+				<div class="vid-speed">
+					<p id="current-speed"></p>
+					<button type="button" class="orange-btn speed-btn" id="slower">Slow Down Vid</button>
+					<button type="button" class="orange-btn speed-btn" id="faster">Speed Up Vid</button>
+				</div>
+
 			</section>
 		</main>
 
@@ -74,4 +79,6 @@
 			</footer>
 		</div>
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./js/one-off.js"></script>
 </html>
