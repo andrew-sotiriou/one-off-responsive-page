@@ -14,12 +14,13 @@ gulp.task('sass', function() {
     }))
 });
 
-gulp.task('watch', ['browserSync', 'sass', 'move-html', 'move-images', 'move-videos', 'move-js'], function (){
+gulp.task('watch', ['browserSync', 'sass', 'move-html', 'move-images', 'move-videos', 'move-js','move-audio'], function (){
   gulp.watch('app/scss/*.scss', ['sass']);
   gulp.watch('app/index.html', ['move-html']); 
   gulp.watch('app/images/*.png', ['move-images']); 
   gulp.watch(['app/videos/*.mp4', 'app/videos/*.vtt'], ['move-videos']); 
   gulp.watch('app/js/*.js', ['move-js']); 
+  gulp.watch(['app/audio/*.mp3', 'app/audio/*.wav'], ['move-audio']); 
   // Other watchers
 })
 
@@ -58,6 +59,14 @@ gulp.task('move-vtt', function(){
 gulp.task('move-js', function(){
   return gulp.src('app/js/*.js')
     .pipe(gulp.dest('html/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+gulp.task('move-audio', function(){
+  return gulp.src(['app/audio/*.mp3', 'app/audio/*.wav'])
+    .pipe(gulp.dest('html/audio'))
     .pipe(browserSync.reload({
       stream: true
     }))
