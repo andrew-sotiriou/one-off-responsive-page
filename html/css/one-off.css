@@ -20,6 +20,13 @@ section p {
   cursor: pointer;
   font-weight: normal;
   text-transform: uppercase; }
+  .orange-btn.speed-btn {
+    outline: none;
+    width: auto; }
+  .orange-btn#slower {
+    margin-right: 5%; }
+  .orange-btn#faster {
+    margin-left: 5%; }
 
 /* /Orange button */
 * {
@@ -131,6 +138,10 @@ section {
     padding-bottom: 15px; }
     section p:last-of-type {
       padding-top: 3%; }
+    section p.courtesy {
+      text-align: center;
+      padding-top: 0%;
+      padding-bottom: 0%; }
   section .orange-btn {
     margin-bottom: 20px; }
   section figure {
@@ -150,12 +161,14 @@ section {
     font-weight: bold; }
   section video {
     position: relative;
-    padding: 5% 10% 5% 10%;
+    padding: 5% 10% 0% 10%;
     height: auto;
     width: 80%; }
     section video::cue {
       color: white;
       background-color: transparent; }
+  section div.vid-speed {
+    text-align: center; }
 
 @media (min-width: 600px) {
   section {

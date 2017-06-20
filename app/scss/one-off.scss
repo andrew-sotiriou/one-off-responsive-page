@@ -24,6 +24,19 @@
     cursor: pointer;
     font-weight: normal;
     text-transform: uppercase;
+
+    &.speed-btn{
+        outline: none;
+        width: auto;
+    }
+
+    &#slower{
+        margin-right: 5%;
+    }
+
+    &#faster{
+        margin-left: 5%;
+    }
 }
 
 /* /Orange button */
@@ -174,6 +187,12 @@ section {
         &:last-of-type{
             padding-top: 3%;
         }
+
+        &.courtesy{
+            text-align: center;
+            padding-top: 0%;
+            padding-bottom: 0%;
+        }
     }
 
     .orange-btn{
@@ -200,13 +219,19 @@ section {
 
     video{
         position: relative;
-        padding: 5% 10% 5% 10%;
+        padding: 5% 10% 0% 10%;
         height: auto;
         width: 80%;
 
         &::cue{
             color: white;
             background-color: transparent;
+        }
+    }
+
+    div{
+        &.vid-speed{
+            text-align:center;
         }
     }
 }
