@@ -50,6 +50,7 @@
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .clear{
@@ -127,6 +128,7 @@ header {
 main {
     width: 100%;
     display: block;
+    margin: 0 auto;
 
     h2 {
         @extend %blue;
@@ -144,26 +146,22 @@ main {
     }
 }
 
-@media (min-width: 800px){
-    main {
-        margin: 50px 0 0px;
-    }
-}
-
 /* Section */
 
 section {
-    width: 95%;
+    width: 100%;
     display: inline-block;
-    padding-left: 5%;
-    min-width: 95%;
-    max-width: 95%;
+    min-width: 100%;
+    max-width: 100%;
     height: auto;
     min-height: 50%;
     max-height: 75%;
-    padding-bottom: 5%;
     padding-top: 0%;
     margin: 0 auto;
+
+    &:nth-child(1){
+        padding-left: 5%;
+    }
 
     &:nth-child(2){
         background-color: lightblue;
@@ -172,6 +170,11 @@ section {
         max-width: 100%;
         height: auto;
         padding-bottom: 0%;
+    }
+
+    &:nth-child(3){
+        background-color: white;
+        text-align: center;
     }
 
     #section-left{
@@ -239,7 +242,6 @@ section {
 
 @media (min-width: 600px){
     section{ 
-        padding-bottom: 0%;  
         figure{
             display: inline-block;
             right: 40%;
@@ -249,14 +251,16 @@ section {
 
 @media (min-width: 800px){
     section{
-        height: 65vh;
+        &:nth-child(1){
+            height: 70vh;
+        }
         #section-left{
-            width: 50%;
+            width: 48%;
         }
         figure{
             @include translate(0%, 13%);
             width: 45%;
-            right: 3%;
+            right: 7%;
             height: 90%;
             float: right;
         }

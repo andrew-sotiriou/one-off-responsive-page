@@ -35,7 +35,8 @@ section p {
 
 body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow-x: hidden; }
 
 .clear {
   clear: both; }
@@ -96,7 +97,8 @@ header {
 /* Main Section */
 main {
   width: 100%;
-  display: block; }
+  display: block;
+  margin: 0 auto; }
   main h2 {
     font-size: 1.25rem;
     padding-bottom: 1%;
@@ -106,23 +108,19 @@ main {
   main h2 {
     font-size: 1.75rem; } }
 
-@media (min-width: 800px) {
-  main {
-    margin: 50px 0 0px; } }
-
 /* Section */
 section {
-  width: 95%;
+  width: 100%;
   display: inline-block;
-  padding-left: 5%;
-  min-width: 95%;
-  max-width: 95%;
+  min-width: 100%;
+  max-width: 100%;
   height: auto;
   min-height: 50%;
   max-height: 75%;
-  padding-bottom: 5%;
   padding-top: 0%;
   margin: 0 auto; }
+  section:nth-child(1) {
+    padding-left: 5%; }
   section:nth-child(2) {
     background-color: lightblue;
     padding-left: 0%;
@@ -130,6 +128,9 @@ section {
     max-width: 100%;
     height: auto;
     padding-bottom: 0%; }
+  section:nth-child(3) {
+    background-color: white;
+    text-align: center; }
   section #section-left {
     float: left;
     width: 90%; }
@@ -171,25 +172,23 @@ section {
     text-align: center; }
 
 @media (min-width: 600px) {
-  section {
-    padding-bottom: 0%; }
-    section figure {
-      display: inline-block;
-      right: 40%; } }
+  section figure {
+    display: inline-block;
+    right: 40%; } }
 
 @media (min-width: 800px) {
-  section {
-    height: 65vh; }
-    section #section-left {
-      width: 50%; }
-    section figure {
-      -webkit-transform: translate(0%, 13%);
-      -moz-transform: translate(0%, 13%);
-      transform: translate(0%, 13%);
-      width: 45%;
-      right: 3%;
-      height: 90%;
-      float: right; } }
+  section:nth-child(1) {
+    height: 70vh; }
+  section #section-left {
+    width: 48%; }
+  section figure {
+    -webkit-transform: translate(0%, 13%);
+    -moz-transform: translate(0%, 13%);
+    transform: translate(0%, 13%);
+    width: 45%;
+    right: 7%;
+    height: 90%;
+    float: right; } }
 
 @media (min-width: 1000px) {
   section figure {
