@@ -134,7 +134,8 @@ section {
     padding-top: 3%;
     padding-bottom: 3%; }
     section:nth-child(3) h3 {
-      padding-bottom: 3%; }
+      padding-bottom: 3%;
+      text-decoration: underline; }
   section #section-left {
     float: left;
     width: 90%; }
