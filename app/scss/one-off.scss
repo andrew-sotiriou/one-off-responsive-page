@@ -175,6 +175,12 @@ section {
     &:nth-child(3){
         background-color: white;
         text-align: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+        h3{
+            padding-bottom: 3%;
+        }
     }
 
     #section-left{
