@@ -26,19 +26,8 @@ function fasterVidRate(){
 $(document).ready(function(){
 	displayVidRate();
 
-	$('#slower').click(function(){
-		if(currentVidRate === 0){
-			displayRate.innerHTML = "You are already at 0 speed. Please click Speed Up.";
-		}
-		else{
-			slowVidRate();
-		}
-	});
-
-	$('#faster').click(function(){
-		fasterVidRate();
-	});
-
+	$('#slower').on('click', slowVidRate);
+	$('#faster').on('click', fasterVidRate)
 });
 
 
