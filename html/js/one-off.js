@@ -27,7 +27,7 @@ $(document).ready(function(){
 	displayVidRate();
 
 	$('#slower').on('click', slowVidRate);
-	$('#faster').on('click', fasterVidRate)
+	$('#faster').on('click', fasterVidRate);
 });
 
 
