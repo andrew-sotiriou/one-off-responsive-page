@@ -3,7 +3,7 @@
 var vid = document.getElementById("bbb-vid"),
 	currentVidRate = vid.playbackRate,
 	displayRate = document.getElementById('current-speed'),
-	subValue = 0.5,
+	subValue = 0.1,
 	addValue = 1;
 
 
@@ -13,7 +13,7 @@ function displayVidRate(){
 
 function slowVidRate(){
 	if (currentVidRate > 0){
-		vid.playbackRate = vid.playbackRate - subValue;
+		vid.playbackRate = (vid.playbackRate - subValue).toFixed(1);
 		currentVidRate = vid.playbackRate;
 		displayVidRate();
 	}
@@ -25,7 +25,7 @@ function slowVidRate(){
 function fasterVidRate(){
 	vid.playbackRate = vid.playbackRate + addValue;
 	currentVidRate = vid.playbackRate;
-	displayVidRate()
+	displayVidRate();
 }
 
 $(document).ready(function(){
