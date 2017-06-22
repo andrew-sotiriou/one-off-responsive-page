@@ -12,9 +12,14 @@ function displayVidRate(){
 }
 
 function slowVidRate(){
-	vid.playbackRate = vid.playbackRate - subValue;
-	currentVidRate = vid.playbackRate;
-	displayVidRate()
+	if (currentVidRate > 0){
+		vid.playbackRate = vid.playbackRate - subValue;
+		currentVidRate = vid.playbackRate;
+		displayVidRate();
+	}
+	else{
+		displayRate.innerHTML = "The video playback rate can't be below 0";
+	}
 }
 
 function fasterVidRate(){
