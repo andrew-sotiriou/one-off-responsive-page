@@ -4,7 +4,8 @@ var vid = document.getElementById("bbb-vid"),
 	currentVidRate = vid.playbackRate,
 	displayRate = document.getElementById('current-speed'),
 	subValue = 0.1,
-	addValue = 1;
+	addValue = 1,
+	displayGL = document.getElementById("geo-location");
 
 
 function displayVidRate(){
@@ -28,11 +29,26 @@ function fasterVidRate(){
 	displayVidRate();
 }
 
+function displayGeo(position){
+	displayGL.innerHTML = "Latitude: " + position.coords.latitude + " : "+ 
+    "Longitude: " + position.coords.longitude;
+}
+
+function getLocation(){
+    if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(displayGeo);
+    } 
+    else{ 
+		displayGL.innerHTML = "Geolocation is not supported. Please try a new browser.";
+    }
+}
+
 $(document).ready(function(){
 	displayVidRate();
 
 	$('#slower').on('click', slowVidRate);
 	$('#faster').on('click', fasterVidRate);
+	$('#location').on('click', getLocation);
 });
 
 
