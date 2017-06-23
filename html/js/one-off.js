@@ -29,18 +29,35 @@ function fasterVidRate(){
 	displayVidRate();
 }
 
+function getLocation(){
+    if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(displayGeo, geoError);
+    } 
+    else{ 
+		displayGL.innerHTML = "Geolocation is not supported. Please try a new browser.";
+    }
+}
+
 function displayGeo(position){
 	displayGL.innerHTML = "Latitude: " + position.coords.latitude + " : "+ 
     "Longitude: " + position.coords.longitude;
 }
 
-function getLocation(){
-    if (navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(displayGeo);
-    } 
-    else{ 
-		displayGL.innerHTML = "Geolocation is not supported. Please try a new browser.";
-    }
+function geoError(error){
+	switch(error.code){
+		case error.PERMISSION_DENIED:
+            displayGL.innerHTML = "You have denied the Geo Location request."
+            break;
+		case error.POSITION_UNAVAILABLE:
+            displayGL.innerHTML = "Sorry, but your location is unavailable"
+			break;
+		case error.TIMEOUT:
+            displayGL.innerHTML = "Sorry, but we ran out of time. Closing time!"
+			break;
+		case error.UNKNOWN_ERROR:
+            displayGL.innerHTML = "Sorry, but something unknown has happened."
+			break;       
+	}
 }
 
 $(document).ready(function(){
