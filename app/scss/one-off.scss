@@ -18,17 +18,13 @@
     background-color: #ff9933;
     color: white;
     padding: 10px;
-    width: 150px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     font-weight: normal;
     text-transform: uppercase;
     outline: none;
-
-    &.speed-btn{
-        width: auto;
-    }
 
     &#slower{
         margin-right: 5%;

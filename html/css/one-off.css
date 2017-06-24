@@ -14,15 +14,13 @@ section p {
   background-color: #ff9933;
   color: white;
   padding: 10px;
-  width: 150px;
+  width: auto;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   font-weight: normal;
   text-transform: uppercase;
   outline: none; }
-  .orange-btn.speed-btn {
-    width: auto; }
   .orange-btn#slower {
     margin-right: 5%; }
   .orange-btn#faster {
