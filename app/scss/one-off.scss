@@ -53,6 +53,14 @@ body {
     clear: both;
 }
 
+.hidden{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
 /* Header */
 header {
     background-image: url('../images/header-bg.png');
@@ -250,6 +258,13 @@ section {
             color: white;
             background-color: transparent;
         }
+    }
+
+    #map{
+        width: 90%;
+        height: 350px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 

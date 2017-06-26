@@ -39,6 +39,12 @@ body {
 .clear {
   clear: both; }
 
+.hidden {
+  display: none; }
+
+.active {
+  display: block; }
+
 /* Header */
 header {
   background-image: url("../images/header-bg.png");
@@ -180,6 +186,11 @@ section {
     section video::cue {
       color: white;
       background-color: transparent; }
+  section #map {
+    width: 90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%; }
 
 @media (min-width: 600px) {
   section figure {
