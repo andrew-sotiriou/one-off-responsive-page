@@ -5,7 +5,8 @@ var vid = document.getElementById("bbb-vid"),
 	displayRate = document.getElementById('current-speed'),
 	subValue = 0.1,
 	addValue = 1,
-	displayGL = document.getElementById("geo-location");
+	displayGL = document.getElementById("geo-location"),
+	dispMap = document.getElementById("map");
 
 
 function displayVidRate(){
@@ -39,8 +40,22 @@ function getLocation(){
 }
 
 function displayGeo(position){
-	displayGL.innerHTML = "Latitude: " + position.coords.latitude + " : "+ 
-    "Longitude: " + position.coords.longitude;
+	displayGL.innerHTML = "Latitude: " + position.coords.latitude + " : " + "Longitude: " + position.coords.longitude;
+    displayMap(position);
+}
+
+function displayMap(position){
+	var latlon = { lat: position.coords.latitude, lng: position.coords.longitude };
+	var map = new google.maps.Map(dispMap,{
+		zoom: 15,
+		center: latlon
+	});
+	var mapMarker = new google.maps.Marker({
+		position: latlon,
+		map: map
+	});
+	dispMap.classList.remove('hidden');
+	dispMap.classList.add('active');
 }
 
 function geoError(error){
