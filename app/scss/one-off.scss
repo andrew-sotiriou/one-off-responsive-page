@@ -164,12 +164,20 @@ section {
     margin: 0 auto;
     text-align: center;
 
+    &:nth-child(odd){
+        background-color: white;  
+    }
+
+    &:nth-child(even){
+        background-color: lightblue;    
+    }
+
     &:nth-child(1){
         padding-left: 5%;
+        background-color: transparent;
     }
 
     &:nth-child(2){
-        background-color: lightblue;
         padding-left: 0%;
         width: 100%;
         max-width: 100%;
@@ -178,7 +186,6 @@ section {
     }
 
     &:nth-child(3){
-        background-color: white;
         text-align: center;
         padding-top: 2%;
         padding-bottom: 2%;
@@ -190,7 +197,6 @@ section {
     }
 
     &:nth-child(4){
-        background-color: olive;
         padding-top: 2%;
         padding-bottom: 2%;
 
