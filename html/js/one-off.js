@@ -31,26 +31,12 @@ function fasterVidRate(){
 }
 
 function getLocation(){
-	$.ajax({
-		url: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDl_BHMy-VUlOURJm5iKYYxumKU6as9kDk",
-		type: "GET",
-		dataType: "jsonp",
-		complete: function(){
-			//Do Nothing
-		},
-		error: function(){
-			//alert("error");
-		},
-		success: function(data){
-			//alert(data);
-		    if (navigator.geolocation){
-				navigator.geolocation.getCurrentPosition(displayGeo, geoError);
-		    } 
-		    else{ 
-				displayGL.innerHTML = "Geolocation is not supported. Please try a new browser.";
-		    }
-		},
-	});
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(displayGeo, geoError);
+	} 
+	else{ 
+		displayGL.innerHTML = "Geolocation is not supported. Please try a new browser.";
+	}
 }
 
 function displayGeo(position){
