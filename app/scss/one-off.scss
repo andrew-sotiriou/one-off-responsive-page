@@ -160,7 +160,7 @@ section {
     height: auto;
     min-height: 50%;
     max-height: 75%;
-    padding-top: 0%;
+    padding-top: 2%;
     margin: 0 auto;
     text-align: center;
 
@@ -173,8 +173,9 @@ section {
     }
 
     &:nth-child(1){
-        padding-left: 5%;
         background-color: transparent;
+        padding-left: 5%;
+        padding-top: 0%;
     }
 
     &:nth-child(2){
@@ -187,22 +188,15 @@ section {
 
     &:nth-child(3){
         text-align: center;
-        padding-top: 2%;
-        padding-bottom: 2%;
-
-        h3{
-            padding-bottom: 1%;
-            text-decoration: underline;
-        }
     }
 
     &:nth-child(4){
-        padding-top: 2%;
         padding-bottom: 2%;
+    }
 
-        h3{
-            padding-bottom: 1%;
-        }
+    h3{
+        padding-bottom: 1%;
+        text-decoration: underline;
     }
 
     #section-left{
