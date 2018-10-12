@@ -197,7 +197,7 @@ section {
 
 @media (min-width: 800px) {
   section:nth-child(1) {
-    height: 70vh; }
+    height: 84vh; }
   section #section-left {
     width: 48%; }
   section figure {
