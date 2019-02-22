@@ -108,7 +108,7 @@ header {
     }
 }
 
-@media (min-width: 600px){
+@media only screen and (min-width: 600px){
     header {
         h1 {
             font-size: 3.5rem;
@@ -142,7 +142,7 @@ main {
     }
 }
 
-@media (min-width: 600px){
+@media only screen and  (min-width: 600px){
     main {
         h2{
             font-size: 1.75rem;
@@ -269,7 +269,7 @@ section {
 }
 
 
-@media (min-width: 600px){
+@media only screen and (min-width: 600px){
     section{ 
         figure{
             display: inline-block;
@@ -278,7 +278,7 @@ section {
     }
 }
 
-@media (min-width: 800px){
+@media only screen and (min-width: 800px){
     section{
         &:nth-child(1){
             height: 105vh;
@@ -296,7 +296,7 @@ section {
     }
 }
 
-@media (min-width: 1000px){
+@media only screen and (min-width: 1000px){
     section{
         figure{
             margin-right: 5%;
@@ -401,12 +401,12 @@ footer{
 }
 /* /Blue Bar */
 
-@media (min-width: 600px){
+@media only screen and (min-width: 600px){
     footer{
         h4{
             font-size: 1.5rem;
         }
-
+        
         .row{
             .steps-main{
                 font-size: 1.5rem;
@@ -415,7 +415,7 @@ footer{
     }
 }
 
-@media (min-width: 800px){
+@media only screen and (min-width: 800px){
     footer{
         .row{ 
             width: 30%;

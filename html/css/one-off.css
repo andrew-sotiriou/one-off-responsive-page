@@ -86,7 +86,7 @@ header {
     left: 50%;
     margin-left: -85px; }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   header h1 {
     font-size: 3.5rem;
     margin-top: 2%; }
@@ -108,7 +108,7 @@ main {
     padding-bottom: 1%;
     padding-top: 5%; }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   main h2 {
     font-size: 1.75rem; } }
 
@@ -190,12 +190,12 @@ section {
     margin-left: 5%;
     margin-right: 5%; }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   section figure {
     display: inline-block;
     right: 40%; } }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   section:nth-child(1) {
     height: 105vh; }
   section #section-left {
@@ -209,7 +209,7 @@ section {
     height: 90%;
     float: right; } }
 
-@media (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   section figure {
     margin-right: 5%; } }
 
@@ -284,13 +284,13 @@ footer {
   padding-bottom: 5%; }
 
 /* /Blue Bar */
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   footer h4 {
     font-size: 1.5rem; }
   footer .row .steps-main {
     font-size: 1.5rem; } }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   footer .row {
     width: 30%;
     padding-bottom: 0%; }
